@@ -1,0 +1,2 @@
+# URL2QRCODE_chrome_extension
+Chrome插件，活动标签页url转二维码
