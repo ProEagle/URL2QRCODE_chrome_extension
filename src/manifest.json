@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "URL2QRCODE",
+	"version": "1.0.0",
+	"description": "url转二维码，方便移动端访问PC浏览的网页",
+	"author": "proEagle",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	]
+}
