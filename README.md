@@ -11,6 +11,11 @@ $ git clone https://github.com/ProEagle/URL2QRCODE_chrome_extension.git
 2. 打开Chrome浏览器，在地址栏输入`chrome://extensions/`，进入扩展程序页面。
 3. 打开下载代码的目录可直接将`src`目录拖入浏览器中，即安装插件。或进入`dist`目录下，将`URL2QRCODE.crx`拖入浏览器，即安装插件。
 
+# 功能
+1. 点击转换当前页面的链接url为二维码
+2. 可以修改url重新生成二维码
+3. 可以修改二维码前景色、背景色、大小
+
 # 使用
 打开浏览器，点击插件图标，即可弹出指向当前标签网页的二维码。
 # 引用
