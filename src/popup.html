@@ -17,12 +17,86 @@ body {
 #qr-code img {
 	width: 100%;
 }
+.header-operator {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.operator-btn {
+	cursor: pointer;
+	margin: 5px 10px;
+	color: #00a6ed;
+	border-bottom: 1px solid #00a6ed;
+}
+.user-select-none {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;	
+}
+.operator-box {
+	display: none;
+	flex-flow: column nowrap;
+	padding: 0 10px;
+}
+#url {
+	border: none;
+	border-bottom: 1px solid #353535;
+	outline: none;
+}
+#btn-render {
+	margin: 10px 0;
+	padding: 2px 5px;
+	border-radius: 2px;
+	color: #fff;
+	background: #00a6ed;
+	text-align: center;
+	cursor: pointer;
+}
+.operator-item {
+	margin: 5px 0;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	width: 100%;
+}
+.operator-memo {
+	width: 50px;
+	flex: none;
+	text-align: right;
+}
+#size {
+	width: 50px;
+	border: none;
+	border-bottom: 1px solid #353535;
+	outline: none;
+}
 </style>
+<script type="text/javascript" src="./qrCode.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
 </head>
 <body style="width: 200px">
 	<div id="qr-code"></div>
-	<!-- <button id="test-msg">send</button> -->
-	<script type="text/javascript" src="./qrCode.js"></script>
-	<script type="text/javascript" src="js/popup.js"></script>
+	<div class="header-operator">
+		<div id="btn-more" class="operator-btn user-select-none">更多</div>
+		<div id="btn-setting" class="operator-btn user-select-none">设置</div>
+	</div>
+	<div id="more-tool" class="operator-box">
+		<input type="text" id="url" />
+		<div id="btn-render" class="user-select-none" onclick="renderUrl()">生成二维码</div>
+	</div>
+	<div id="setting" class="operator-box">
+		<div class="operator-item">
+			<span class="operator-memo">大小：</span>
+			<input type="number" id="size" />
+		</div>
+		<div class="operator-item">
+			<span class="operator-memo">前景色：</span>
+			<input type="color" id="frontColor" />
+		</div>
+		<div class="operator-item">
+			<span class="operator-memo">背景色：</span>
+			<input type="color" id="backColor" />
+		</div>
+	</div>
 </body>
 </html>
